@@ -5,13 +5,13 @@ const initialState = {
   age: 25,
 }
 
-const currentUser = (state = initialState, action) => {
+const userToSwipe = (state = initialState, action) => {
   switch (action.type) {
-    case "UPDATE_USER":
+    case "SET_USER_TO_SWIPE":
       return action.payload.user;
     default:
       return state;
   }
 }
 
-export default currentUser;
+export default userToSwipe;

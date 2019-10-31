@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SwipeScreen from '../SwipeScreen'
+import MatchScreen from '../MatchScreen'
 
 const Router = (props) => {
   switch (props.currentPage) {
     case "SwipeScreen":
       return (<SwipeScreen />)
     case "MatchScreen":
-      return (<h1>MatchScreen</h1>)
+      return (<MatchScreen />)
     case "ProfileScreen":
       return (<h1>ProfileScreen</h1>)
     default:
