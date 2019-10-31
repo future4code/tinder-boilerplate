@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import routes from './routes';
-import userToSwipe from './userToSwipe'
+import profiles from './profiles'
 
 const rootReducer = combineReducers({
   routes, // equivalente a routes: routes
-  userToSwipe, // equivalente a userToSwipe: userToSwipe
+  profiles, // equivalente a profiles: profiles
 })
 
 export default rootReducer;

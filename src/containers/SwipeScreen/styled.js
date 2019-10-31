@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Icon from '@mdi/react'
 
 export const OptionButton = styled.button`
    border-radius: 50%;
@@ -10,7 +11,8 @@ export const OptionButton = styled.button`
    transform: scale(0.7);
    transition: 0.2s;
    position: relative;
-   box-shadow: 0 4px 9px 0 rgba(213,218,224,.3);
+   box-shadow: 0 0 15px 0 rgba(205, 205, 205, 0.73);
+   overflow: hidden;
    
    :focus {
    		outline: none;
@@ -19,7 +21,7 @@ export const OptionButton = styled.button`
    :hover {
     background-color: ${props => props.option === 'like' ? 'green' : 'red'};
     color: white;
-    transform: scale(0.8, 0.8)
+    transform: scale(0.8)
    }
    
    :active {
@@ -29,7 +31,6 @@ export const OptionButton = styled.button`
 				top: 0;
     		left: 0;
     		position: absolute;
-    		border-radius: 50%;
     		background-color: rgba(0, 0, 0, 0.5);
     		content: "";
 			}
@@ -37,8 +38,26 @@ export const OptionButton = styled.button`
 `
 
 export const ContentWrapper = styled.div`
-	padding: 5px;
+	padding: 20px;
+	padding-bottom: 0;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+`
+export const MainCard = styled.div`
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+`
+export const MatchIcon = styled(Icon)`
+	display: block;
+	fill: #753192;
+`
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  flex-shrink: 0;
+  padding: 10px 0;
 `

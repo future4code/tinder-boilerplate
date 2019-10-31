@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
 
 const MainContainer = styled.div`
   width: 400px;
-  height: 700px;
   margin: 20px auto;
   border: 1px solid black;
   border-radius: 5px;
