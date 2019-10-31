@@ -1,5 +1,5 @@
 const initialState = {
-  currentPage: "ProfileScreen",
+  currentPage: "SwipeScreen",
 };
 
 export default (state = initialState, action) => {

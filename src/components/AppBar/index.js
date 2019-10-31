@@ -18,8 +18,8 @@ export const AppBar = (props) => {
 }
 
 AppBar.propTypes = {
-  leftAction: PropTypes.func,
-  rightAction: PropTypes.func,
+  leftAction: PropTypes.object,
+  rightAction: PropTypes.object,
 }
 
 export default AppBar;

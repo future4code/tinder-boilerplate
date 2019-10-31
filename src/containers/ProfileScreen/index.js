@@ -15,11 +15,9 @@ class ProfileScreen extends React.Component {
   }
 
   render() {
-    const { currentSelectedProfile } = this.props;
     return (
       <div>
-        <ProfilePicture src={currentSelectedProfile.photo}/>
-
+        <ProfilePicture src={this.props.currentSelectedProfile.photo}/>
       </div>
     )
   }

@@ -30,13 +30,29 @@ export const UserCardWrapper = styled.div`
 	border-radius: 5px;
 	overflow: hidden;
 	transition: 0.5s;
-	 
-	animation: ${props => props.animation} 0.5s linear;
+	height: 430px;
+	animation: ${props => props.animation} 0.5s forwards;
+	display: flex;
+	align-items: center;
+`
+
+export const BlurredBackground = styled.div`
+	${({photo}) => {
+		if(photo)
+		return `
+					background-image: url(${photo});
+					filter: blur(30px);
+					height: 100%;
+					width: 100%;
+					position: absolute;
+				`
+	}}
 `
 
 export const ProfilePicture = styled.img`
   width: 100%;
   display: block;
+  z-index: 1;
 `
 
 export const InfoWrapper = styled.div`
@@ -50,6 +66,7 @@ export const InfoWrapper = styled.div`
 	flex-direction: column;
 	justify-content: flex-end;
 	padding: 15px;
+	z-index: 2;
 `
 
 export const TitleWrapper = styled.div`

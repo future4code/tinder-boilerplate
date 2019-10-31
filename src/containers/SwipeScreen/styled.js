@@ -43,21 +43,24 @@ export const ContentWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	justify-content: flex-end;
 `
-export const MainCard = styled.div`
-	height: 100%;
+
+export const SwipeScreenWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 `
+
+
 export const MatchIcon = styled(Icon)`
 	display: block;
 	fill: #753192;
 `
+
 export const ButtonsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex: 1;
-  flex-shrink: 0;
   padding: 10px 0;
 `

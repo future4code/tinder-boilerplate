@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
+  BlurredBackground,
   InfoWrapper,
   ProfilePicture,
   TitleWrapper,
@@ -22,6 +24,7 @@ class UserSwipeCard extends Component {
 
     return (
       <UserCardWrapper animation={animation}>
+        <BlurredBackground photo={userToSwipe.photo}/>
         <ProfilePicture src={userToSwipe.photo}/>
         <InfoWrapper>
           <TitleWrapper>
@@ -34,3 +37,7 @@ class UserSwipeCard extends Component {
 }
 
 export default UserSwipeCard
+
+UserSwipeCard.propTypes = {
+  userToSwipe: PropTypes.object
+}

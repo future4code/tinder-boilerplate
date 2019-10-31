@@ -4,6 +4,7 @@ import store from './store'
 import {Provider} from 'react-redux'
 import Router from './containers/Router'
 import styled, {createGlobalStyle} from 'styled-components'
+import ClearButton from './components/ClearButton'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
@@ -20,7 +21,11 @@ const GlobalStyle = createGlobalStyle`
 
 const MainContainer = styled.div`
   width: 400px;
-  margin: 20px auto;
+  height: 600px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -34,6 +39,7 @@ const App = () => {
 			<MainContainer>
 				<Router/>
 			</MainContainer>
+			<ClearButton/>
 		</Provider>
 	)
 }
