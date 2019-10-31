@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import {connect} from 'react-redux'
 import {clearSwipes} from '../../actions/profiles'
@@ -9,14 +10,18 @@ const ClearButton = styled.button`
 	right: 5px;
 `
 
+function ClearButtonWrapper(props) {
+	return <ClearButton onClick={props.clearSwipes}>Limpar swipes e matches</ClearButton>
+}
+
+ClearButtonWrapper.propTypes = {
+	clearSwipes: PropTypes.func.isRequired
+}
+
 function mapDispatchToProps(dispatch) {
 	return {
 		clearSwipes: () => dispatch(clearSwipes()),
 	}
-}
-
-function ClearButtonWrapper(props) {
-	return <ClearButton onClick={props.clearSwipes}>Limpar swipes e matches</ClearButton>
 }
 
 export default connect(

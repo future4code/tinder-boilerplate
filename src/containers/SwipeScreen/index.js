@@ -2,13 +2,12 @@ import PropTypes from 'prop-types'
 import React, {Component} from 'react'
 import UserSwipeCard from '../../components/UserSwipeCard'
 import {AppBar} from '../../components/AppBar'
-import {ButtonsWrapper, ClearButton, ContentWrapper, SwipeScreenWrapper, MatchIcon, OptionButton, Placeholder} from './styled'
+import {ButtonsWrapper, ContentWrapper, SwipeScreenWrapper, MatchIcon, OptionButton} from './styled'
 import {connect} from 'react-redux'
 import {mdiAccountMultipleCheck} from '@mdi/js'
 import {swipeLeft, swipeRight} from '../../components/UserSwipeCard/styled'
 import {updateCurrentPage} from '../../actions/route'
 import {Loader} from '../../components/Loader'
-import {chooseProfile, clearSwipes, getProfileToSwipe} from '../../actions/profiles'
 
 export class SwipeScreen extends Component {
 	constructor(props) {
@@ -72,24 +71,19 @@ export class SwipeScreen extends Component {
 }
 
 SwipeScreen.propTypes = {
-	chooseProfile: PropTypes.func.isRequired,
-	clearSwipes: PropTypes.func.isRequired,
-	getProfileToSwipe: PropTypes.func.isRequired,
 	goToMatchScreen: PropTypes.func.isRequired,
+	chooseProfile: PropTypes.func.isRequired,
+	getProfileToSwipe: PropTypes.func.isRequired,
 	profileToSwipe: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
-	profileToSwipe: state.profiles.profileToSwipe,
 })
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		goToMatchScreen: () => dispatch(updateCurrentPage('MatchScreen')),
-		chooseProfile: (id, choice) => dispatch(chooseProfile(id, choice)),
-		getProfileToSwipe: () => dispatch(getProfileToSwipe()),
 	}
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(SwipeScreen)
